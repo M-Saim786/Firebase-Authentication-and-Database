@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <style>
+    #edit_pro {
+      display: none;
+    }
+
+    #getProduct {
+      border: 1px solid red;
+      border-radius: 20px;
+      margin: 40px 380px;
+    }
+
+    tr,
+    th,
+    td {
+      border: 1px solid red;
+      border-radius: 20px;
+width: 30%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h2 class="text-center mt-2">Welcome to Admin panel</h2>
+  <div class="text-center">
+
+
+    <table id="getProduct">
+      <tr>
+        <th>Name</th>
+        <th>Object Key</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>View</th>
+      </tr>
+    </table>
+
+
+
+    <a href="./add_dish.html" class="text-center btn btn-primary ">Add Product</a>
+  </div>
+
+
+  
+
+
+
+
+  <form action="">
+
+    <div class="container" id="edit_pro">
+      <div class="row">
+        <div class="col col-lg-3"></div>
+        <div class="col col-lg-6">
+          <form>
+            <div class="form-group mt-4">
+              <label for="exampleInputEmail1"> DISH NAME </label>
+              <input type="text" class="form-control" id="DISH_NAME" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">PRICE</label>
+              <input type="Contact " class="form-control" id="PRICE" placeholder="Password">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputPassword1">QTY </label>
+              <input type="Contact " class="form-control" id="QTY" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <input type="file" accept="image/*">
+              <b id="progress" style="display:none">progress : </b>
+
+              <br>
+              <button id="upload" disabled>upload</button>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-primary" id="submit">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
+
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA0TVugVv5UCNdKGdplWCAzXzuVRwnoTCo",
+      authDomain: "mini-hackthon-16f37.firebaseapp.com",
+      databaseURL: "https://mini-hackthon-16f37-default-rtdb.firebaseio.com",
+      projectId: "mini-hackthon-16f37",
+      storageBucket: "mini-hackthon-16f37.appspot.com",
+      messagingSenderId: "91011409286",
+      appId: "1:91011409286:web:1bc7eb311616242bfef807"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="./admin.js"></script>
+</body>
+
+</html>

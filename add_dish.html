@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Dish Forms</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      .row{
+width: 45%;
+border: 1px solid red;
+border-radius: 20px;
+margin: 40px auto;
+
+    }
+    </style>
+</head>
+
+<body>
+  <div class="container ">
+    <div class="row" >
+<h2 class="text-center">Add Dishes</h2>
+
+      <form>
+        <div class="form-group mb-2 mt-4">
+          <label for="exampleInputEmail1"> Dish Name </label>
+          <input type="text" class="form-control" id="DISH_NAME" aria-describedby="emailHelp"
+            placeholder="Enter Dish Name">
+          <br>
+        </div>
+        <div class="form-group mb-3">
+          <label for="exampleInputPassword1">Price</label>
+          <input type="Contact " class="form-control" id="PRICE" placeholder="Price">
+        </div>
+        <br>
+        <div class="form-group mb-3">
+          <label for="exampleInputPassword1">Quantity </label>
+          <input type="Contact " class="form-control" id="QTY" placeholder="Quantity">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="image">Upload Image</label>
+          <input type="file" class="form-control" accept="image/*" id="image">
+          <b id="progress" style="display:none">progress : </b>
+
+          <br>
+          <button id="upload" disabled class="btn btn-primary">Upload</button>
+
+        </div>
+
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary mb-2" disabled id="submit">Submit</button>
+      </form>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
+
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA0TVugVv5UCNdKGdplWCAzXzuVRwnoTCo",
+      authDomain: "mini-hackthon-16f37.firebaseapp.com",
+      databaseURL: "https://mini-hackthon-16f37-default-rtdb.firebaseio.com",
+      projectId: "mini-hackthon-16f37",
+      storageBucket: "mini-hackthon-16f37.appspot.com",
+      messagingSenderId: "91011409286",
+      appId: "1:91011409286:web:1bc7eb311616242bfef807"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="add_dish.js"></script>
+</body>
+
+</html>

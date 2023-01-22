@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/19fcc4b5b5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    * {
+      user-select: none;
+    }
+
+    .alert {
+      border-left: 4px solid #ffa502;
+      position: absolute;
+      right: 10px;
+      top: 40px;
+      z-index: 2;
+      min-width: 30%;
+      padding: 14px 20px;
+      background-color: #ffdb9b;
+      color: #ce8500;
+      font-family: sans-serif;
+    }
+
+    .hide {
+      display: none;
+
+    }
+
+    .show {
+      animation: show_alert 1s ease forwards;
+    }
+
+    @keyframes show_alert {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-10px);
+      }
+    }
+
+    .fa-exclamation-circle {
+      /* border: 1px solid red; */
+      color: #ce8500;
+      font-size: 24px;
+      margin: 5px 12px;
+      /* padding: 4px 10px; */
+    }
+
+    .msg {
+      /* border: 1px solid red; */
+      padding: 0px 5px;
+      font-size: 18px;
+      margin-left: -12px;
+    }
+
+    .close-btn {
+      padding: 14px 24px;
+      background-color: #ffd080;
+      font-size: 22px;
+
+      /* border: 1px solid red; */
+      position: absolute;
+      top: 0px;
+      right: 1px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #ffc776;
+    }
+
+    #success {
+      border-left: 4px solid #07a414;
+      background-color: #60ff60;
+      color: green;
+    }
+
+    #close-alert-success {
+      background-color: #00e013;
+    }
+
+    #close-alert-success:hover {
+      background-color: #00e013;
+    }
+
+    .s_icon {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="alert show hide" id="alert">
+    <span class="fas fa-exclamation-circle a_icon"></span>
+    <span class="msg">Warning.. Enter Details Correctly</span>
+    <span class="close-btn" id="close-alert">
+      <span class="fas fa-times a_icon"></span>
+    </span>
+  </div>
+
+  <div class="alert show hide" id="success">
+    <span class="fas fa-exclamation-circle s_icon"></span>
+    <span class="msg">Resume... Created Successfully</span>
+    <span class="close-btn" id="close-alert-success">
+      <span class="fas fa-times a_icon"></span>
+    </span>
+  </div>
+
+
+
+
+  <h2 class="text-center mt-2">
+    Assignment
+  </h2>
+  <div class="container mt-4 ">
+
+
+    <div class=" mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" style="width: 30%;"
+        placeholder="Enter Email Address">
+    </div>
+
+
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="name" id="name" class="form-control" placeholder="Enter Your Name" style="width: 30%;">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="text" class="form-control" id="password" style="width: 30%;" placeholder="Enter Password">
+    </div>
+
+    <div class="mb-3">
+      <label for="admin">Admin</label>
+      <input type="radio" name="role" value="Admin" id="admin">
+
+      <label for="user">User</label>
+      <input type="radio" name="role" id="user" value="user">
+    </div>
+
+
+    <input type="button" value="Sign up" id="signup" class="btn btn-primary m-2">
+    <input type="button" value="Sign in" id="signin" class="btn btn-primary m-2">
+  </div>
+
+
+    <!-- <div class="container mt-4" id="formDiv">
+
+    <form>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="text" class="form-control" id="password">
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="mb-3">
+        <h2>Role</h2>
+        <label for="admin" class="form-label">Admin</label>
+        <input type="radio" name="role" id="admin" value="admin">
+        <label for="user" class="form-label">User</label>
+        <input type="radio" name="role" id="user" value="user">
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="signup">Sign Up </button>
+
+      <button id="signin" class="btn btn-primary">Sign In</button>
+    </form>
+  </div> -->
+
+
+    <!-- 
+
+  <table class="data" id="admintable">
+    <tr>
+      <td>
+        <h2>Welcome to Admin Panel</h2>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2> Admin</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Name</h2>
+      </td>
+      <td>
+        <h2>Email</h2>
+      </td>
+      <td>
+        <h2>Password</h2>
+      </td>
+<td>
+  <h2>Role</h2>
+
+</td>
+
+    </tr>
+  </table>
+
+
+  <table id="userTable">
+    <tr>
+      <td>
+
+        <h2>User Panel</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>
+          User Info
+        </h2>
+      </td>
+    </tr>
+  </table> -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
+
+    <script>
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0TVugVv5UCNdKGdplWCAzXzuVRwnoTCo",
+        authDomain: "mini-hackthon-16f37.firebaseapp.com",
+        databaseURL: "https://mini-hackthon-16f37-default-rtdb.firebaseio.com",
+        projectId: "mini-hackthon-16f37",
+        storageBucket: "mini-hackthon-16f37.appspot.com",
+        messagingSenderId: "91011409286",
+        appId: "1:91011409286:web:1bc7eb311616242bfef807"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./app.js"></script>
+    <!-- <script src="./comment.js"></script> -->
+</body>
+
+</html>

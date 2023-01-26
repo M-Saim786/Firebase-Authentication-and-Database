@@ -11,19 +11,12 @@ firebase.database().ref('Dishes').once('value' ,(sanp) =>
         console.log(element.imgUrl)
         printdata.innerHTML += `
 
-        <div class="card col m-2 col-lg-3 col-md-4 col-sm-6 col-12" id="" style="border: 1px solid red;">
-               
-  
-
-
-
-
-        <img src="${element.imgUrl}" class="card-img-top" alt="...">
+        <div class="card col m-2  col-lg-3 col-md-4 col-sm-6 col-12" id="" style="width:16rem">
+        <img src="${element.imgUrl}" class="card-img-top" alt="..." style='height:30vh'>
         <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-       
+        <h5 class="card-title">${element.Dish_Name}</h5>
+        <p class="card-text">Price of Dish is "${element.Price}"</p>
+       <a class='btn btn-primary'>Buy Now</a>
     </div>
     </div>
         `
